@@ -30,7 +30,7 @@ foreach ($events as $event) {
   }
   $getText = $event->gettext();
   $reply = getTalk($getText);
-  $bot->replyText($event->getReplyToken(), $reply);
+  $bot->replyText($event->getReplyToken(), $getText);
 }
 
 function getTalk ($text) {
