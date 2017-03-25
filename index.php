@@ -55,8 +55,8 @@ function getTalk ($text) {
 	$res = curl_exec($conn);
 	// close
 	curl_close($conn);
-	var_dump ($res);
-	$res = mb_convert_encoding($res,'UTF-8');
+
+	//$res = mb_convert_encoding($res,'UTF-8');
 	$obj = json_decode($res, false);
 	$reply = $obj->results[0]->reply;
 	return $reply;
