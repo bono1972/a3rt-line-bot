@@ -56,7 +56,7 @@ function getTalk ($text) {
 	curl_setopt($conn, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($conn, CURLOPT_URL,  $url);
 	curl_setopt($conn, CURLOPT_POST, true);
-	curl_setopt($conn, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($conn, CURLOPT_POSTFIELDS, json_encode($data));
 	// 実行
 	$res = curl_exec($conn);
 	// close
